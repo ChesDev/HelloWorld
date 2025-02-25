@@ -66,16 +66,20 @@ public class Main {
 
         System.out.println("Задача №4");
         System.out.println();
-        byte perTick = (byte) 16;
-        short per10Ticks = (short) (20/2 * perTick);
-        short perDay = (short) (24*60/2 * perTick);
-        int per3Days = perDay * 3;
-        int perMonth = perDay * 31;
+        byte perMin = (byte) 16/2;
+        byte t1 = (byte) 20;
+        short t2 = (short) 24*60;
+        short t3 = (short) (t2*3);
+        int t4 = t2*31;
+        short per20Min = (short) (t1 * perMin);
+        short perDay = (short) (t2 * perMin);
+        int per3Days = t3 * perMin;
+        int perMonth = t4 * perMin;
 
-        System.out.println("За 20 минут машина произвела " + per10Ticks + " штук бутылок.");
-        System.out.println("За 1 день машина произвела " + perDay + " штук бутылок.");
-        System.out.println("За 3 дня машина произвела " + per3Days + " штук бутылок.");
-        System.out.println("За месяц машина произвела " + perMonth + " штук бутылок.");
+        System.out.println("За " + t1 + " машина произвела " + per20Min + " штук бутылок.");
+        System.out.println("За " + t2 + " машина произвела " + perDay + " штук бутылок.");
+        System.out.println("За " + t3 + " машина произвела " + per3Days + " штук бутылок.");
+        System.out.println("За " + t4 + " машина произвела " + perMonth + " штук бутылок.");
         System.out.println();
         System.out.println();
         System.out.println();
@@ -102,10 +106,10 @@ public class Main {
         System.out.println("Задача №6");
         System.out.println();
 
-        byte banana = (byte) 80;
-        byte milk = (byte) 105;
-        byte iceCream = (byte) 100;
-        byte egg = (byte) 70;
+        short banana = (short) 80;
+        short milk = (short) 105;
+        short iceCream = (short) 100;
+        short egg = (short) 70;
         short breakfastNetWeight = (short) (banana*5 + milk*2 + iceCream*2 + egg*4);
         float breakfastNetWeightKg = breakfastNetWeight/1000f;
 
