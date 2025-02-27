@@ -29,14 +29,11 @@ public class Main {
 
         if (deviceOS && deviceYear) {
             System.out.println("Установите версию приложения для iOS по ссылке.");
-        }
-        if (!deviceOS && deviceYear) {
+        } else if (!deviceOS && deviceYear) {
             System.out.println("Установите версию приложения для Android по ссылке.");
-        }
-        if (deviceOS && !deviceYear) {
+        } else if (deviceOS && !deviceYear) {
             System.out.println("Установите облегчнную версию прложения для iOS по ссылке.");
-        }
-        if (!deviceOS && !deviceYear) {
+        } else if (!deviceOS && !deviceYear) {
             System.out.println("Установите облегчнную версию прложения для Android по ссылке.");
         }
 
@@ -66,31 +63,20 @@ public class Main {
         System.out.println("Задача №4");
         System.out.println();
 
-        int deliveryDistance = 101;
+        int deliveryDistance = 100;
         byte deliveryTime = 0;
 
         if (deliveryDistance <= 20) {
             deliveryTime = 1;
-        }
-        if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            System.out.println("Потребуется дней: " +deliveryTime);
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
             deliveryTime = 2;
-        }
-        if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            System.out.println("Потребуется дней: " +deliveryTime);
+        }else if (deliveryDistance > 60 && deliveryDistance <= 100) {
             deliveryTime = 3;
-        }
-
-        switch (deliveryTime) {
-            case 1:
-                System.out.println("Потребуется дней: " +deliveryTime);
-                break;
-            case 2:
-                System.out.println("Потребуется дней: " +deliveryTime);
-                break;
-            case 3:
-                System.out.println("Потребуется дней: " +deliveryTime);
-                break;
-            default:
-                System.out.println("Свыше 100км доставка не осуществляется");
+            System.out.println("Потребуется дней: " +deliveryTime);
+        } else {
+            System.out.println("Свыше 100км доставка не осуществляется");
         }
         System.out.println();
         System.out.println();
@@ -101,33 +87,33 @@ public class Main {
         System.out.println("Задача №5");
         System.out.println();
 
-        byte monthNumber = (byte) 9;
+        byte monthNumber = (byte) 0;
 
-        switch (monthNumber) {
-            case 12:
-            case 1:
-            case 2:
-                System.out.println("Зима");
-                break;
-            case 3:
-            case 4:
-            case 5:
-                System.out.println("Весна");
-                break;
-            case 6:
-            case 7:
-            case 8:
-                System.out.println("Лето");
-                break;
-            case 9:
-            case 10:
-            case 11:
-                System.out.println("Осень");
-                break;
-            default:
+        if (monthNumber >=1 && monthNumber <=12) {
+            switch (monthNumber) {
+                case 12:
+                case 1:
+                case 2:
+                    System.out.println("Зима");
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    System.out.println("Весна");
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    System.out.println("Лето");
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    System.out.println("Осень");
+                    break;
+                default:
+            }
         }
-        System.out.println();
-        System.out.println();
         System.out.println();
     }
 }
