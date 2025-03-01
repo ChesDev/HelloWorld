@@ -10,8 +10,8 @@ public class Main {
         while (capital < 2_459_000) {
             month++;
             capital = capital + contribution;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + capital + " рублей.");
         }
-        System.out.println("Месяц " + month + ", сумма накоплений равна " + capital + " рублей.");
 
 // ------------------------------------------------------------------------------------------------------
 
@@ -23,9 +23,8 @@ public class Main {
             System.out.print(number + " ");
         }
         System.out.println();
-        while (number >= 1) {
+        for (;number >= 1; number--) {
             System.out.print(number + " ");
-            number--;
         }
         System.out.println();
 
@@ -90,13 +89,30 @@ public class Main {
 // ------------------------------------------------------------------------------------------------------
         System.out.println();
         System.out.println("Задача №7");
-        int firstFriday = 2;
+        int firstFriday = 5;
         int day = 0;
-        while (day < 31) {
-            day++;
-            if ((day - firstFriday) % 7 == 0 || day == firstFriday) {
-                System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
+        int friday = 1;
+        boolean fourFriday = (firstFriday >3 && firstFriday<6);
+        boolean fiveFriday = (firstFriday<=3);
+
+        if (fourFriday) {
+            while (friday <= 4) {
+                day++;
+                if ((day - firstFriday) % 7 == 0 || day == firstFriday) {
+                    friday++;
+                    System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
+                }
             }
+        } else if (fiveFriday) {
+            while (friday <= 5) {
+                day++;
+                if ((day - firstFriday) % 7 == 0 || day == firstFriday) {
+                    friday++;
+                    System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
+                }
+            }
+        } else {
+            System.out.println("Введите корректное число первой пятницы в месяце!");
         }
 // ------------------------------------------------------------------------------------------------------
         System.out.println();
