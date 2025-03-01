@@ -23,7 +23,7 @@ public class Main {
             System.out.print(number + " ");
         }
         System.out.println();
-        for (;number >= 1; number--) {
+        for (; number >= 1; number--) {
             System.out.print(number + " ");
         }
         System.out.println();
@@ -92,8 +92,8 @@ public class Main {
         int firstFriday = 5;
         int day = 0;
         int friday = 1;
-        boolean fourFriday = (firstFriday >3 && firstFriday<6);
-        boolean fiveFriday = (firstFriday<=3);
+        boolean fourFriday = (firstFriday > 3 && firstFriday <= 7);
+        boolean fiveFriday = (firstFriday <= 3);
 
         if (fourFriday) {
             while (friday <= 4) {
