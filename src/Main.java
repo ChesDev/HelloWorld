@@ -51,8 +51,8 @@ public class Main {
         int deposit = 15000;
         int percent = 7;
         month = 0;
-        while (deposit<12000000) {
-            deposit=deposit+(deposit/100*percent);
+        while (deposit < 12000000) {
+            deposit = deposit + (deposit / 100 * percent);
             month++;
             System.out.println("Месяц " + month + ", сумма накоплений " + deposit);
         }
@@ -65,10 +65,10 @@ public class Main {
         deposit = 15000;
         percent = 7;
         month = 0;
-        while (deposit<12000000) {
-            deposit=deposit+(deposit/100*percent);
+        while (deposit < 12000000) {
+            deposit = deposit + (deposit / 100 * percent);
             month++;
-            if (month%6 == 0){
+            if (month % 6 == 0) {
                 System.out.println("Месяц " + month + ", сумма накоплений " + deposit);
             }
         }
@@ -79,10 +79,10 @@ public class Main {
         percent = 7;
         int yearQuanity = 9;
         month = 0;
-        while (month<yearQuanity*12) {
-            deposit=deposit+(deposit/100*percent);
+        while (month < yearQuanity * 12) {
+            deposit = deposit + (deposit / 100 * percent);
             month++;
-            if (month%6 == 0){
+            if (month % 6 == 0) {
                 System.out.println("Месяц " + month + ", сумма накоплений " + deposit);
             }
         }
@@ -92,10 +92,10 @@ public class Main {
         System.out.println("Задача №7");
         int firstFriday = 2;
         int day = 0;
-        while (day<31) {
+        while (day < 31) {
             day++;
-            if ((day-firstFriday)%7==0 || day==firstFriday) {
-                System.out.println("Сегодня пятница, "+day+"-е число. Необходимо подготовить отчет");
+            if ((day - firstFriday) % 7 == 0 || day == firstFriday) {
+                System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
             }
         }
 // ------------------------------------------------------------------------------------------------------
@@ -104,12 +104,12 @@ public class Main {
 
         int year = 2000;
 
-        int calcYear = year-200;
-        int finalYear = year+100;
+        int calcYear = year - 200;
+        int finalYear = year + 100;
 
-        while (calcYear<finalYear) {
+        while (calcYear < finalYear) {
             calcYear++;
-            if (calcYear%79 ==0) {
+            if (calcYear % 79 == 0) {
                 System.out.println(calcYear);
             }
         }
