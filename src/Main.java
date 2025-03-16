@@ -12,13 +12,13 @@ public class Main {
         Book playToLive = new Book("Играть чтобы жить", dmitriyRus, 2013);
         Book wayOfShaman = new Book("Путь шамана", vasiliyMahonenko, 2013);
 
-        shining.setYear(1996);
+        shining.setYear(1977);
 
-        System.out.println(greenMile.getTitle() + ", " + greenMile.getYear() + " - " + greenMile.getAuthor().getFirstName() + " " + greenMile.getAuthor().getLastName());
-        System.out.println(shining.getTitle() + ", " + shining.getYear() + " - " + shining.getAuthor().getFirstName() + " " + shining.getAuthor().getLastName());
-        System.out.println(hourglass.getTitle() + ", " + hourglass.getYear() + " - " + hourglass.getAuthor().getFirstName() + " " + hourglass.getAuthor().getLastName());
-        System.out.println(playToLive.getTitle() + ", " + playToLive.getYear() + " - " + playToLive.getAuthor().getFirstName() + " " + playToLive.getAuthor().getLastName());
-        System.out.println(wayOfShaman.getTitle() + ", " + wayOfShaman.getYear() + " - " + wayOfShaman.getAuthor().getFirstName() + " " + wayOfShaman.getAuthor().getLastName());
+        System.out.println(greenMile);
+        System.out.println(shining);
+        System.out.println(hourglass);
+        System.out.println(playToLive);
+        System.out.println(wayOfShaman);
 
     }
 }
